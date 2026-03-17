@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Simple Voting System using if...else
+
+// Candidate vote counts
+let candidateA = 0;
+let candidateB = 0;
+let candidateC = 0;
+
+// Function to cast a vote
+function castVote(vote) {
+    if (vote === "A") {
+        candidateA++;
+        console.log("You voted for Candidate A");
+    } else if (vote === "B") {
+        candidateB++;
+        console.log("You voted for Candidate B");
+    } else if (vote === "C") {
+        candidateC++;
+        console.log("You voted for Candidate C");
+    } else {
+        console.log("Invalid vote! Please choose A, B, or C.");
+    }
+}
+
+// Function to determine the winner
+function determineWinner() {
+    if (candidateA > candidateB && candidateA > candidateC) {
+        console.log("Candidate A wins with " + candidateA + " votes!");
+    } else if (candidateB > candidateA && candidateB > candidateC) {
+        console.log("Candidate B wins with " + candidateB + " votes!");
+    } else if (candidateC > candidateA && candidateC > candidateB) {
+        console.log("Candidate C wins with " + candidateC + " votes!");
+    } else {
+        console.log("It's a tie!");
+    }
+}
+
+// Example usage:
+castVote("A");
+castVote("B");
+castVote("A");
+castVote("C");
+castVote("A");
+
+determineWinner();
+
+    </script>
+</body>
+</html>
